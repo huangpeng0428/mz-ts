@@ -1,7 +1,12 @@
 <template>
-  <div id="app">
-    <router-view/>
-  </div>
+  <el-container id="app">
+    <!-- <router-view/> -->
+    <div class="container">
+      <div class="left-container">
+        1
+      </div>
+    </div>
+  </el-container>
 </template>
 
 <script>
