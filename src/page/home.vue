@@ -17,9 +17,4 @@ export default {
 };
 </script>
 <style lang="scss">
-.container{
-  .header{
-    color: red;
-  }
-}
 </style>

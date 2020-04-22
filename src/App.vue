@@ -1,17 +1,24 @@
 <template>
   <el-container id="app">
-    <!-- <router-view/> -->
-    <div class="container">
+    <router-view/>
+    <!-- <div class="container">
       <div class="left-container">
         1
       </div>
-    </div>
+    </div> -->
+    <el-header class="header">
+      头部
+    </el-header>
+    <el-container class="main">
+
+    </el-container>
   </el-container>
 </template>
 
-<script>
-export default {
-  name: 'App'
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator'
+export default class App extends Vue {
+
 }
 </script>
 
