@@ -1,6 +1,5 @@
 <template>
   <el-container id="app">
-    <router-view/>
     <!-- <div class="container">
       <div class="left-container">
         1
@@ -17,8 +16,25 @@
 
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
+import DragApi from '@/dragapi/dragapi.ts'
+
+@Component({
+  name: 'app',
+  components: {}
+})
 export default class App extends Vue {
 
+  // public dragData: any = DragApi.configList
+
+  created () {
+    console.log(111);
+    
+    // console.log(this.dragData);
+    
+  }
+  mounted() {
+    
+  }
 }
 </script>
 
@@ -29,7 +45,6 @@ export default class App extends Vue {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   height: 100%;
 }
 </style>
