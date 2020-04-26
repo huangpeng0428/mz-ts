@@ -9,7 +9,36 @@
       头部
     </el-header>
     <el-container class="main">
-
+      <div class="left">
+        <div class="comps-group" v-for="(config,index) in dragData" :key="index">
+          <el-breadcrumb class="comps-group__title">
+            {{ config.title }}
+          </el-breadcrumb>
+          <div class="comps-item-wrap">
+            <draggable
+              :group="dragOption.group"
+              :sort="dragOption.sort"
+              class="comps-group-body">
+              <div v-for="(list,index) in config.content"
+                class="comps-item"
+                :class="list.class"
+                :type="list.type"
+                :defaultText="list.defaultText"
+                :key="index">
+                <div :class="`comps-item-icon comps-item-${list.class}`"></div>
+                <div class="comps-item-name">{{ list.title }}</div>
+              </div>
+            </draggable>
+          </div>
+        </div>
+      </div>
+      <div class="center">
+        <div class="sit-btn">
+          <el-button @click="onSave('save')">保存</el-button>
+          <el-button @click="onSave('preview')">预览</el-button>
+          <el-button @click="onSave('publish')">发布</el-button>
+        </div>
+      </div>
     </el-container>
   </el-container>
 </template>
@@ -17,20 +46,27 @@
 <script lang="ts">
 import { Vue, Component } from 'vue-property-decorator'
 import DragApi from '@/dragapi/dragapi.ts'
+import Draggable from 'vuedraggable'
 
 @Component({
   name: 'app',
-  components: {}
+  components: {
+    Draggable
+  }
 })
 export default class App extends Vue {
 
-  // public dragData: any = DragApi.configList
-
+  public dragData: any = DragApi.configList
+  public dragOption: any = {
+    group: {
+      name: 'components',
+      pull: 'clone',
+      put: false
+    },
+    sort: false
+  }
   created () {
     console.log(111);
-    
-    // console.log(this.dragData);
-    
   }
   mounted() {
     

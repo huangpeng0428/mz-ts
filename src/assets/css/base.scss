@@ -26,3 +26,87 @@ html,body {
     right: 0;
     top: 0;
   }
+
+  .main {
+    font-size: 14px;
+    background-color: #f0eeef;
+    display: flex;
+    width: 100%;
+    min-width: 1200px;
+    padding-top: 60px;
+    .left {
+        width: 280px;
+        padding: 10px;
+        background: #fff;
+        .comps-group {
+            &__title {
+                height: 40px;
+                line-height: 40px;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+        .comps-item-wrap {
+            .comps-group-body {
+              width: 100%;
+              display: flex;
+              flex-direction: initial;
+              flex-wrap: wrap;
+              .comps-item {
+                position: relative;
+                margin-bottom: 10px;
+                background: #fff;
+                border: 1px solid #d0d0d0;
+                margin-right: 10px;
+                width: 80px;
+                height: 88px;
+                cursor: pointer;
+              }
+            }
+        }
+    }
+    .comps-item {
+        &-name {
+            text-align: center;
+            line-height: 24px;
+        }
+        &-icon {
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 60px;
+        }
+        &-icon-text {
+            background-image: url('~assets/img/icon-text.png')
+        }
+        &-icon-imgs {
+            background-image: url('~assets/img/icon-imgs.png')
+        }
+        &-icon-imgslider {
+            background-image: url('~assets/img/icon-imgslider.png')
+        }
+        &-icon-video {
+            background-image: url('~assets/img/icon-video.png')
+        }
+        &-icon-mdsewindow {
+            background-image: url('~assets/img/icon-mdsewindow.png')
+        }
+        &-icon-btn {
+            background-image: url('~assets/img/icon-btn.png')
+        }
+        &-icon-floatcard {
+            background-image: url('~assets/img/icon-floatcard.png')
+        }
+        &-icon-store {
+            background-image: url('~assets/img/icon-store.png')
+        }
+        &-icon-dlbtn {
+            background-image: url('~assets/img/icon-dlbtn.png')
+        }
+        &-icon-phone {
+            background-image: url('~assets/img/icon-phone.png')
+        }
+        &-icon-consult {
+            background-image: url('~assets/img/icon-consult.png')
+        }
+    }
+}
