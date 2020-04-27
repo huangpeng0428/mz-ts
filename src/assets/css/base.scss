@@ -109,4 +109,48 @@ html,body {
             background-image: url('~assets/img/icon-consult.png')
         }
     }
+    .center{
+        flex-grow: 1;
+        flex-shrink: 0;
+        flex-basis: 0%;
+        width: 100%;
+        .sit-btn {
+            display: flex;
+            justify-content: flex-end;
+            padding: 10px 20px;
+        }
+        .site-wrap {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .site {
+                width: 375px;
+                height: 775px;
+                position: relative;
+                // margin-top: 10px;
+                background: #fff;
+                box-shadow: 0 2px 4px #d1cfd0;
+                &-body {
+                  height: 100%;
+                  .com-sort {
+                    .btn-wrap {
+                      display: flex;
+                      justify-content: center;
+                      .btn {
+                        text-align: center;
+                        overflow: hidden;
+                      }
+                      .btn_size_large {
+                        width: 80%;
+                        height: 2.5em;
+                        line-height: 2.5em;
+                      }
+                    }
+                  }
+                }
+              }
+        }
+    }
 }

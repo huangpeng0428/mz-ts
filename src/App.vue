@@ -38,6 +38,15 @@
           <el-button @click="onSave('preview')">预览</el-button>
           <el-button @click="onSave('publish')">发布</el-button>
         </div>
+        <section class="site-wrap">
+          <section class="site">
+            <div class="site-header">
+            </div>
+            <com-sorter class="site-body"></com-sorter>
+            <div class="site-footer">
+            </div>
+          </section>
+        </section>
       </div>
     </el-container>
   </el-container>
@@ -47,11 +56,12 @@
 import { Vue, Component } from 'vue-property-decorator'
 import DragApi from '@/dragapi/dragapi.ts'
 import Draggable from 'vuedraggable'
+import ComSorter from '@/view/ComSorter.vue'
 
 @Component({
   name: 'app',
   components: {
-    Draggable
+    Draggable, ComSorter
   }
 })
 export default class App extends Vue {
