@@ -12,13 +12,13 @@ import { COM_DEFAULT_DATA } from '@/enums/index.ts'
 })
 export default class Sort extends Vue {
 
-    // @State sortApi: Array<any>
-    // @Action addCp
+    @State sortApi: Array<any>
+    @Action addCp
     created() {
         console.log(COM_DEFAULT_DATA)
-        // if(!this.sortApi.length) {
-        //     this.addCp()
-        // }
+        if(!this.sortApi.length) {
+            this.addCp(COM_DEFAULT_DATA['SiteHeader'])
+        }
     }
 
 }
