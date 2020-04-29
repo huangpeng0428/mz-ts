@@ -32,3 +32,15 @@ export const deepCopy = (obj: any, cache: Array<any> = []): any => {
   
     return copy
 }
+
+
+/**
+ * Automatic registration 自动化注册
+ */
+export const installComs = (context: any, type: string): any => {
+    return context.keys().reduce((acc: any, cur: any) => {
+      const name: string = type + cur.match(/^.\/(.*).vue$/)[1]
+      acc[name] = context(cur).default
+      return acc
+    }, {})
+}

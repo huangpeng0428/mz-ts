@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="site-content" :style="sortApi[0] && sortApi[0].attr.style">
         1
     </div>
 </template>
@@ -21,5 +21,9 @@ export default class Sort extends Vue {
         }
     }
 
+    @Watch('sortApi', { deep: true })
+    onSortApiChanged (newVal: Array<any>, oldVal: Array<any>) {
+        console.log(newVal)
+    }
 }
 </script>
