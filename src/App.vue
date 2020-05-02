@@ -1,10 +1,5 @@
 <template>
   <el-container id="app">
-    <!-- <div class="container">
-      <div class="left-container">
-        1
-      </div>
-    </div> -->
     <el-header class="header">
       头部
     </el-header>
