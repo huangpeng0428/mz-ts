@@ -43,6 +43,9 @@
           </section>
         </section>
       </div>
+      <div class="right">
+        <com-editor></com-editor>
+      </div>
     </el-container>
   </el-container>
 </template>
@@ -52,11 +55,12 @@ import { Vue, Component } from 'vue-property-decorator'
 import DragApi from '@/dragapi/dragapi.ts'
 import Draggable from 'vuedraggable'
 import ComSorter from '@/view/ComSorter.vue'
+import ComEditor from '@/view/ComEditor.vue'
 
 @Component({
   name: 'app',
   components: {
-    Draggable, ComSorter
+    Draggable, ComSorter,ComEditor
   }
 })
 export default class App extends Vue {
@@ -71,7 +75,6 @@ export default class App extends Vue {
     sort: false
   }
   created () {
-    console.log(111);
   }
   mounted() {
     

@@ -25,6 +25,6 @@ export default class SitHeader extends Vue {}
   height: 40px;
   line-height: 40px;
   text-align: center;
-//   @include ellipsis
+  @include ellipsis
 }
 </style>

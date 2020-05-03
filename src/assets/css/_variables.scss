@@ -1,0 +1,17 @@
+$font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+
+$blue: #3A75FF;
+$gray: #959595;
+$orange: orange;
+$backGray: #f0eeef;
+
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+@function gray($opacity: 1) {
+  @return rgba(0,0,0,$opacity);
+}

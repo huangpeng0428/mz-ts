@@ -5,7 +5,7 @@ let sortApi: Array<any> = []
 const state: RootStateTypes = {
     sortApi,
     editIndex: -1,
-    editShow: false,
+    editShow: true,
     partEdit: false,
     appInfo: {
         packageName: '',
