@@ -52,7 +52,7 @@ export const COM_DEFAULT_DATA: any = {
                 borderRadius: '0',
                 color: BLACK,
             },
-            moudle: {
+            module: {
                 paddingTop: '0',
                 paddingLeft: '0',
                 paddingBottom: '0',
