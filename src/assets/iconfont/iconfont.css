@@ -1,0 +1,44 @@
+@font-face {font-family: "iconfont";
+  src: url('iconfont.woff?t=1575537236924') format('woff'),
+  url('iconfont.ttf?t=1575537236924') format('truetype'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconfont-align-right:before {
+  content: "\e6cd";
+}
+
+.iconfont-align-center:before {
+  content: "\e73e";
+}
+
+.iconfont-align-left:before {
+  content: "\e73f";
+}
+
+.iconfont-phone:before {
+  content: "\e6f9";
+}
+
+.iconfont-weight:before {
+  content: "\e625";
+}
+
+.iconfont-underline:before {
+  content: "\e628";
+}
+
+.iconfont-italic:before {
+  content: "\e67d";
+}
+
+.iconfont-consult:before {
+  content: "\e7d4";
+}
+

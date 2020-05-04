@@ -3,6 +3,7 @@
         <div class="com-editor" v-if="sortApi.length > 0 && editShow === true">
             <div v-for="(appUi,index) in sortApi" :key="appUi.content.code">
                 <component
+                v-if="index === editIndex"
                 :is="normolizeComName(appUi.type)"
                 :comContent.sync="appUi"
                 :sortIdx="index"

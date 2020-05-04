@@ -83,17 +83,20 @@ export default class Sort extends Vue {
         this.setCommon({ index: index, flag: true })
     }
 
+    // 拖拽新增
     onAdd(res) {
-        console.log(res)
-        console.log(this.sortApi)
         this.addCp(res)
         this.getIndex(res.newIndex)
     }
 
+    // 拖拽改变顺序
     onSort(res) {
         if(res.from === res.to) {
             console.log(res)
         }
+    }
+
+    addUnitPx() {
         
     }
 
