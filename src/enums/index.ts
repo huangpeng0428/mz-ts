@@ -1,5 +1,9 @@
 export const HOST: string = 'mzdsp.meizu.com'
-
+export const STYLE_PX: Array<string> = [
+    'fontSize',
+    'borderRadius', 'borderWidth',
+    'paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight'
+  ]
 export const STYLE_MODULE: Array<Object> = [
     {
       label: '上',

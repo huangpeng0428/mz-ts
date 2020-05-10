@@ -52,8 +52,9 @@
 import {Vue, Component, Watch} from 'vue-property-decorator'
 import { State, Mutation, Action } from 'vuex-class'
 import Draggabble from 'vuedraggable'
-import { COM_DEFAULT_DATA } from '@/enums/index.ts'
+import { STYLE_PX, COM_DEFAULT_DATA } from '@/enums/index.ts'
 import SiteComs from '@/components/siteComs/index.ts'
+import { deepCopy } from '@/utils/index.ts'
 @Component({
     name: 'ComSorter',
     components: {
@@ -96,9 +97,22 @@ export default class Sort extends Vue {
         }
     }
 
-    addUnitPx() {
-        
-    }
+    addUnitPx (obj) {
+        let temp: any = deepCopy(obj, [])
+        const deepCircle = (target: any): any => {
+            for (let key in target) {
+                if (typeof target[key] === 'object') {
+                    deepCircle(target[key])
+                } else {
+                    if (STYLE_PX.indexOf(key) > -1 && target[key]) {
+                        target[key] = target[key].replace(/px/g, '') + 'px'
+                    }
+                }
+            }
+            return target
+        }
+        return deepCircle(temp)
+  }
 
     @Watch('sortApi', { deep: true })
     onSortApiChanged (newVal: Array<any>, oldVal: Array<any>) {

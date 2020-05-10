@@ -151,7 +151,7 @@ export default class DlBtnEdit extends Vue {
         this.$set(this.comData.attr.style, style, val)
     }
 
-    //设置字体
+    //设置字体布局
     setTextStyle(idx) {
         let item = this.fontStyleArr[idx]
         item.isActive = !item.isActive
@@ -180,6 +180,11 @@ export default class DlBtnEdit extends Vue {
 
     created() {
         // console.log(this.styleOpt)
+    }
+
+    @Watch('comData', {deep: true})
+    onComDataChanged(newVal: Array<any>, oldVal: Array<any>) {
+        this.$store.commit('setApiItem', newVal)
     }
 }
 </script>

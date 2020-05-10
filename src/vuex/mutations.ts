@@ -23,6 +23,24 @@ const mutations: MutationTree<RootStateTypes> = {
             }
             state.editIndex = obj['index']
         } 
+    },
+
+    setApiItem (state: RootStateTypes, comData: any) {
+        const compare = (origin: any, target: any): void => {
+            for(let key in target) {
+                if(typeof origin[key] === 'object' && origin[key] !== null) {
+                    compare(origin[key], target[key])
+                } else {
+                    if (origin.hasOwnProperty(key)) {
+                        origin[key] = target[key]
+                    } else {
+                        Vue.set(origin, key, target[key])
+                    }
+                }
+            }
+        }
+        let idx: string | number = state.sortApi.findIndex(item => item.code === comData.code)
+        compare(state.sortApi[idx], comData)
     }
 }
 
