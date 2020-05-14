@@ -1,3 +1,8 @@
+/*
+ * @Date: 2020-05-11 14:41:43
+ * @LastEditors: PoloHuang
+ * @LastEditTime: 2020-05-14 14:49:56
+ */
 export const HOST: string = 'mzdsp.meizu.com'
 export const STYLE_PX: Array<string> = [
     'fontSize',
@@ -63,5 +68,24 @@ export const COM_DEFAULT_DATA: any = {
                 paddingRight: '0'
             }
         }
+    },
+    SiteImgs: {
+        type: 'SiteImgs',
+        content: {
+            download: false,
+            urls: []
+        },
+        attr: {
+            top: { status: false, index: -1 },
+            bottom: { status: false, index: -1 },
+            module: {
+                paddingTop: '0',
+                paddingLeft: '0',
+                paddingBottom: '0',
+                paddingRight: '0'
+            },
+            style: {}
+        }
+
     }
 }
