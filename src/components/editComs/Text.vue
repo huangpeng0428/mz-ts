@@ -154,6 +154,7 @@ export default class DlBtnEdit extends Vue {
     //设置字体布局
     setTextStyle(idx) {
         let item = this.fontStyleArr[idx]
+        console.log(item)
         item.isActive = !item.isActive
         const regex = /^align/
         if(regex.test(item.name) && item.isActive) {
